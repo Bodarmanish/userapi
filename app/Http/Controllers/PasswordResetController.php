@@ -34,7 +34,7 @@ class PasswordResetController extends Controller
 											                'token' => str_random(60)
 											            ]
         											   );
-        if ($user && $passwordReset)
+        if($user && $passwordReset)
         {
 	            $user->notify(
 	                new PasswordResetRequest($passwordReset->token)

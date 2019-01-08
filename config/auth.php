@@ -65,6 +65,7 @@ return [
     */
 
     'providers' => [
+
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
@@ -74,8 +75,16 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
-    ],
 
+        
+        Laravel\Socialite\SocialiteServiceProvider::class,
+    
+      ],
+
+    'aliases' => [
+        // ...
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+    ],
     /*
     |--------------------------------------------------------------------------
     | Resetting Passwords
